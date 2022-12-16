@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "postgresql1": {
+      "type": "postgresql",
+      "connectionId": "xgb_rackotpg_con",
+      "dynamicId": null
+    }
+  }
+}
