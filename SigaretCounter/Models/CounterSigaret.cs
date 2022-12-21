@@ -10,4 +10,6 @@ public partial class CounterSigaret
     public int Userid { get; set; }
 
     public int SigaretsCount { get; set; }
+
+    public DateTime CurrentDate { get; set; }
 }

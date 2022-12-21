@@ -44,10 +44,12 @@ public partial class XgbRackotpgContext : DbContext
             entity.ToTable("CounterSigarets", "xgb_rackotpg");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
+                .HasDefaultValueSql("nextval('countersigaretsid_seq'::regclass)")
                 .HasColumnName("id");
+            entity.Property(e => e.CurrentDate).HasColumnType("timestamp without time zone");
             entity.Property(e => e.Userid).HasColumnName("userid");
         });
+        modelBuilder.HasSequence("countersigaretsid_seq", "xgb_rackotpg");
 
         OnModelCreatingPartial(modelBuilder);
     }
