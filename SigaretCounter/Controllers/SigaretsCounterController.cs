@@ -65,7 +65,7 @@ public class SigaretsCounterController : Controller
         return new RsSigaretsList()
         {
             UserId = 1,
-            CounterSigaretList = counterSigaretsLst
+            //CounterSigaretList = counterSigaretsLst
         };
     }
 
